@@ -5,6 +5,7 @@ using UnityEngine;
 public class NodeSelection : MonoBehaviour {
 
     public GameObject last;
+    public Camera cam;
 
 	// Use this for initialization
 	void Start () {
@@ -13,15 +14,21 @@ public class NodeSelection : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        RaycastHit hit;
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Mouse");
-            if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity))
-            {
-                Debug.Log("Hit");
-                if (last == null)
+            Ray();
+        }
+    }
+
+    void Ray() {
+
+        RaycastHit hit;
+        Debug.Log("Ray");
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity))
+        {
+            Debug.Log("Hit " + hit.transform.name);
+            if (last == null)
                 {
                     last = hit.transform.gameObject;
                     hit.transform.GetComponent<NodeController>().selected = true;
@@ -36,7 +43,7 @@ public class NodeSelection : MonoBehaviour {
                 {
                     hit.transform.GetComponent<NodeController>().selected = true;
                 }
-            }
+
         }
     }
 }
