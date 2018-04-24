@@ -13,12 +13,12 @@ public class NodeController : MonoBehaviour {
     public float interval = 1;
     public bool player1 = false;
 
-    public UIManager UI;
+    public GameObject UI;
 
 	// Use this for initialization
 	void Start () {
         InvokeRepeating("Generator", interval, interval);
-        UI = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
+        UI = GameObject.FindGameObjectWithTag("UIManager");
     }
 	
 	// Update is called once per frame
@@ -28,14 +28,16 @@ public class NodeController : MonoBehaviour {
             Renderer rend = GetComponent<Renderer>();
             rend.material.shader = Shader.Find("Specular");
             rend.material.SetColor("_Color", Color.white);
-            UI.node = gameObject;
+            if(!UI.GetComponent<UIManager>().node.Contains(gameObject))
+                UI.GetComponent<UIManager>().node.Add(gameObject);
         }
         else
         {
             Renderer rend = GetComponent<Renderer>();
             rend.material.shader = Shader.Find("Specular");
             rend.material.SetColor("_Color", Color.red);
-            UI.node = null;
+            if(UI.GetComponent<UIManager>().node.Contains(gameObject))
+                UI.GetComponent<UIManager>().node.Remove(gameObject);
         }
 
         textObject.text = score.ToString();

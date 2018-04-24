@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
-    public GameObject node;
+    public List<GameObject> node;
 
     public GameObject btn1;
     public GameObject btn2;
@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour {
     public GameObject fn1;
 
 	void Update () {
-        if (node == null)
+        if (node.Count < 1)
         {
             btn1.SetActive(false);
             btn2.SetActive(false);
@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour {
             image.SetActive(false);
             panel.SetActive(false);
         }
-        else
+        if(node.Count > 0)
         {
             btn1.SetActive(true);
             btn2.SetActive(true);
@@ -41,7 +41,13 @@ public class UIManager : MonoBehaviour {
 
     public void Function1()
     {
-        Instantiate(fn1, node.transform.position + offset, Quaternion.identity);
+        GameObject clone;
+        //if(clone != null)
+        //{
+            clone = Instantiate(fn1, node[0].transform.position + offset, Quaternion.Euler(-90,0,0));
+            clone.transform.parent = node[0];
+        //}
+    
     }
 
     public void Function2()

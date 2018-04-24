@@ -1,12 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class NodeSelection : MonoBehaviour {
 
     public GameObject last;
     public Camera cam;
 
+    private int fingerID = -1;
+    
+    private void Awake()
+    {
+    #if !UNITY_EDITOR
+        fingerID = 0; 
+    #endif
+    
+    }
 	// Use this for initialization
 	void Start () {
 		
@@ -28,45 +38,50 @@ public class NodeSelection : MonoBehaviour {
 
     void Attack()
     {
-        RaycastHit hit;
-
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
+        if (EventSystem.current.IsPointerOverGameObject(fingerID) == false)
         {
-            if (hit.transform.GetComponent<NodeController>() != null)
+            RaycastHit hit;
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log(hit.transform.position);
-                last.transform.GetComponent<NodeController>().Spawn(hit.transform.gameObject);
+                if (hit.transform.GetComponent<NodeController>() != null)
+                {
+                    Debug.Log(hit.transform.position);
+                    last.transform.GetComponent<NodeController>().Spawn(hit.transform.gameObject);
+                }
             }
         }
     }
 
     void Ray() {
-
-        RaycastHit hit;
-        
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
+        if (EventSystem.current.IsPointerOverGameObject(fingerID) == false)
         {
-            if (last == null)
+            RaycastHit hit;
+            
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
             {
-                last = hit.transform.gameObject;
-                hit.transform.GetComponent<NodeController>().selected = true;
-            }
-            if (hit.transform.GetComponent<NodeController>() == null)
-            {
-                last.GetComponent<NodeController>().selected = false;
-                last = null;
-            }
-            if (last != hit.transform)
-            {
-                last.GetComponent<NodeController>().selected = false;
-                hit.transform.GetComponent<NodeController>().selected = true;
-                last = hit.transform.gameObject;
-            }
-            else
-            {
-                hit.transform.GetComponent<NodeController>().selected = true;
+                if (last == null)
+                {
+                    last = hit.transform.gameObject;
+                    hit.transform.GetComponent<NodeController>().selected = true;
+                }
+                if (hit.transform.GetComponent<NodeController>() == null)
+                {
+                    last.GetComponent<NodeController>().selected = false;
+                    last = null;
+                }
+                if (last != hit.transform)
+                {
+                    last.GetComponent<NodeController>().selected = false;
+                    hit.transform.GetComponent<NodeController>().selected = true;
+                    last = hit.transform.gameObject;
+                }
+                else
+                {
+                    hit.transform.GetComponent<NodeController>().selected = true;
+                }
             }
         }
         
