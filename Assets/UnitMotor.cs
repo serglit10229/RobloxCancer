@@ -1,15 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using System;
 using UnityEngine;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+
 
 public class UnitMotor : MonoBehaviour {
 
     public float speed = 2;
     public Vector3 target;
+    public GameObject targetgm;
+    public Text text;
+    int score = 0;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -18,5 +28,12 @@ public class UnitMotor : MonoBehaviour {
         float step = speed * Time.deltaTime;
         target.y = transform.position.y;
         transform.position = Vector3.MoveTowards(transform.position, target, step);
+        score = int.Parse(text.text);
+
+        if (transform.position == target)
+        {
+            targetgm.GetComponent<NodeController>().score += score;
+            Destroy(gameObject);
+        }
     }
 }
