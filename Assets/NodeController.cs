@@ -13,35 +13,49 @@ public class NodeController : MonoBehaviour {
     public float interval = 1;
     public bool player1 = false;
 
-    public GameObject UI;
+    public bool hasFactory = false;
 
-	// Use this for initialization
-	void Start () {
-        InvokeRepeating("Generator", interval, interval);
-        UI = GameObject.FindGameObjectWithTag("UIManager");
+    public GameObject UI;
+    public float time = 0;
+
+    // Use this for initialization
+    void Start () {
+        UI = gameObject.transform.GetChild(0).GetChild(1).gameObject;
+        UI.GetComponent<UIManager>().node = gameObject;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (selected == true)
         {
             Renderer rend = GetComponent<Renderer>();
             rend.material.shader = Shader.Find("Specular");
             rend.material.SetColor("_Color", Color.white);
-            if(!UI.GetComponent<UIManager>().node.Contains(gameObject))
-                UI.GetComponent<UIManager>().node.Add(gameObject);
+            if (!UI.gameObject.activeSelf)
+                UI.gameObject.SetActive(true);
         }
         else
         {
             Renderer rend = GetComponent<Renderer>();
             rend.material.shader = Shader.Find("Specular");
             rend.material.SetColor("_Color", Color.red);
-            if(UI.GetComponent<UIManager>().node.Contains(gameObject))
-                UI.GetComponent<UIManager>().node.Remove(gameObject);
+            if (UI.gameObject.activeSelf)
+                UI.gameObject.SetActive(false);
         }
 
         textObject.text = score.ToString();
-	}
+
+        if (hasFactory == true)
+        {
+            time += Time.deltaTime;
+            if (time >= 1f)
+            {
+                score++;
+                time = 0;
+            }
+        }
+    }
 
     public void Spawn(GameObject target)
     {
@@ -59,7 +73,7 @@ public class NodeController : MonoBehaviour {
         }
     }
 
-    void Generator()
+    void Generate()
     {
         score += 1;
     }
