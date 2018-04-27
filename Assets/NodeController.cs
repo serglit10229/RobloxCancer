@@ -14,9 +14,12 @@ public class NodeController : MonoBehaviour {
     public bool player1 = false;
 
     public bool hasFactory = false;
+    public bool hasReactor = false;
 
     public GameObject UI;
     public float time = 0;
+    public float boostNum = 0;
+
 
     // Use this for initialization
     void Start () {
@@ -49,7 +52,7 @@ public class NodeController : MonoBehaviour {
         if (hasFactory == true)
         {
             time += Time.deltaTime;
-            if (time >= 1f)
+            if (time >= interval)
             {
                 score++;
                 time = 0;

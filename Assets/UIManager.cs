@@ -32,6 +32,12 @@ public class UIManager : MonoBehaviour {
         {
             clone = Instantiate(fn1, node.transform.position + offset, Quaternion.Euler(-90,0,0));
             clone.transform.parent = node.transform;
+            node.GetComponent<NodeController>().hasReactor = true;
+
+            foreach (NodeController g in FindObjectsOfType<NodeController>())
+            {
+                g.interval -= 0.05f;
+            }
         }
     
     }
