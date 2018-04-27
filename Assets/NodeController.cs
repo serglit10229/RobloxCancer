@@ -11,7 +11,6 @@ public class NodeController : MonoBehaviour {
     public int score = 10;
     public Text textObject;
     public float interval = 1;
-    public bool player1 = false;
 
     public bool hasFactory = false;
     public bool hasReactor = false;
@@ -19,6 +18,16 @@ public class NodeController : MonoBehaviour {
     public GameObject UI;
     public float time = 0;
     public float boostNum = 0;
+
+        //Multiplayer
+    public bool team1 = false;
+    public bool team2 = false;
+    //public bool team3 = false;
+    //public bool Idle = true;
+
+    public Color team1Color = Color.blue;
+    public Color team2Color = Color.green;
+    //public Color team3Color = Color.red;
 
 
     // Use this for initialization
@@ -30,6 +39,19 @@ public class NodeController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        /* 
+        if(Idle == true)
+        {
+            team1 = false;
+            team2 = false;
+            team3 = false;
+        }
+        
+        if(team1 == true || team2 == true || team3 == true)
+        {
+            Idle = false;
+        }
+        */
         if (selected == true)
         {
             Renderer rend = GetComponent<Renderer>();
@@ -42,7 +64,13 @@ public class NodeController : MonoBehaviour {
         {
             Renderer rend = GetComponent<Renderer>();
             rend.material.shader = Shader.Find("Specular");
-            rend.material.SetColor("_Color", Color.red);
+            
+            if(team1 == true)
+                rend.material.SetColor("_Color", team1Color);
+            if(team2 == true)
+                rend.material.SetColor("_Color", team2Color);
+            if(team1 == false && team2 == false)
+                rend.material.SetColor("_Color", Color.red);
             if (UI.gameObject.activeSelf)
                 UI.gameObject.SetActive(false);
         }
