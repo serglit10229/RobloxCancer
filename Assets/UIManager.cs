@@ -37,7 +37,10 @@ public class UIManager : MonoBehaviour {
 
             foreach (NodeController g in FindObjectsOfType<NodeController>())
             {
-                g.interval -= 0.05f;
+                if (g.team == node.GetComponent<NodeController>().team)
+                {
+                    g.interval -= 0.05f;
+                }
             }
         }
     

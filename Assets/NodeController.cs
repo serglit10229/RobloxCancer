@@ -25,8 +25,15 @@ public class NodeController : MonoBehaviour {
     //public bool team3 = false;
     //public bool Idle = true;
 
+    public string team;
+    public bool battle = false;
+    public int opponentScore = 0;
+    public string opponentTeam;
+
     public Color team1Color = Color.blue;
     public Color team2Color = Color.green;
+
+    public TeamScore scoreUI;
     //public Color team3Color = Color.red;
 
 
@@ -34,6 +41,26 @@ public class NodeController : MonoBehaviour {
     void Start () {
         UI = gameObject.transform.GetChild(0).GetChild(1).gameObject;
         UI.GetComponent<UIManager>().node = gameObject;
+        scoreUI = Object.FindObjectOfType<TeamScore>();
+        if (team1 == true)
+        {
+            team = "team1";
+        }
+        if (team2 == true)
+        {
+            team = "team2";
+        }
+
+        
+        if (team == "team1")
+        {
+            scoreUI.t1 += score;
+        }
+        if (team == "team2")
+        {
+            scoreUI.t2 += score;
+        }
+
     }
 
     // Update is called once per frame
@@ -52,6 +79,7 @@ public class NodeController : MonoBehaviour {
             Idle = false;
         }
         */
+        
         if (selected == true)
         {
             Renderer rend = GetComponent<Renderer>();
@@ -77,13 +105,66 @@ public class NodeController : MonoBehaviour {
 
         textObject.text = score.ToString();
 
-        if (hasFactory == true)
+
+
+
+        if (battle == true)
         {
-            time += Time.deltaTime;
-            if (time >= interval)
+            if (opponentScore > 0 || score > 0)
             {
-                score++;
-                time = 0;
+                time += Time.deltaTime;
+                if (time >= 1)
+                {
+                    score--;
+                    opponentScore--;
+
+                    scoreUI.t1--;
+                    scoreUI.t2--;
+
+                    time = 0;
+                }
+            }
+
+            if (opponentScore == 0)
+            {
+                battle = false;
+            }
+            if (score == 0)
+            {
+                score = opponentScore;
+                if (opponentTeam == "Team1")
+                {
+                    team2 = false;
+                    team1 = true;
+                }
+                if (opponentTeam == "Team2")
+                {
+                    team2 = true;
+                    team1 = false;
+                }
+                battle = false;
+            }
+            textObject.text = score.ToString() + "v" + opponentScore.ToString();
+        }
+        else
+        {
+            textObject.text = score.ToString();
+            if (hasFactory == true)
+            {
+                time += Time.deltaTime;
+                if (time >= interval)
+                {
+                    score++;
+                    time = 0;
+                    if (team == "team1")
+                    {
+                        scoreUI.t1++;
+                    }
+                    if (team == "team2")
+                    {
+                        scoreUI.t2 ++;
+                    }
+                }
             }
         }
     }
@@ -99,6 +180,7 @@ public class NodeController : MonoBehaviour {
             GameObject spawnedUnit = Instantiate(Unit, transform.position + offset, rotation);
             spawnedUnit.GetComponent<UnitMotor>().target = target.transform.position;
             spawnedUnit.GetComponent<UnitMotor>().targetgm = target;
+            spawnedUnit.GetComponent<UnitMotor>().team = team;
             spawnedUnit.GetComponent<UnitMotor>().text.text = score.ToString();
             score = 0;
         }

@@ -17,6 +17,8 @@ public class UnitMotor : MonoBehaviour {
     public Text text;
     int score = 0;
 
+    public string team;
+
 
     // Use this for initialization
     void Start () {
@@ -32,8 +34,19 @@ public class UnitMotor : MonoBehaviour {
 
         if (transform.position == target)
         {
-            targetgm.GetComponent<NodeController>().score += score;
-            Destroy(gameObject);
+            if (targetgm.GetComponent<NodeController>().team == team)
+            {
+                targetgm.GetComponent<NodeController>().score += score;
+                Destroy(gameObject);
+            }
+
+            if (targetgm.GetComponent<NodeController>().team != team)
+            {
+                targetgm.GetComponent<NodeController>().battle = true;
+                targetgm.GetComponent<NodeController>().opponentScore = score;
+                targetgm.GetComponent<NodeController>().opponentTeam = team;
+                Destroy(gameObject);
+            }
         }
     }
 }

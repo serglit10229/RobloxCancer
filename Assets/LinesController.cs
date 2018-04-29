@@ -15,7 +15,12 @@ public class LinesController : MonoBehaviour {
 				nodes.Add(co.gameObject);	
 		}
 	}
-	/* 
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, transform.localScale);
+    }
+    /* 
 	void Update()
 	{
 		
