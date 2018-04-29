@@ -62,6 +62,7 @@ public class UIManager : MonoBehaviour {
         {
             clone = Instantiate(fn3, node.transform.position + (new Vector3(0, 0.25f, 0)), Quaternion.Euler(0, 0, 0));
             clone.transform.parent = node.transform;
+            node.GetComponent<NodeController>().hasFort = true;
             clone.transform.GetChild(0).transform.rotation = Quaternion.Euler(0, Random.Range(0f, 360f), 0); 
         }
     }

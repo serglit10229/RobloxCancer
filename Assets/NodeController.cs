@@ -14,12 +14,14 @@ public class NodeController : MonoBehaviour {
 
     public bool hasFactory = false;
     public bool hasReactor = false;
+    public bool hasFort = false;
 
     public GameObject UI;
     public float time = 0;
     public float boostNum = 0;
+    public int fortNum = 0;
 
-        //Multiplayer
+    //Multiplayer
     public bool team1 = false;
     public bool team2 = false;
     //public bool team3 = false;
@@ -31,7 +33,7 @@ public class NodeController : MonoBehaviour {
     public string opponentTeam;
 
     public Color team1Color = Color.blue;
-    public Color team2Color = Color.green;
+    public Color team2Color = Color.red;
 
     public TeamScore scoreUI;
     //public Color team3Color = Color.red;
@@ -98,7 +100,7 @@ public class NodeController : MonoBehaviour {
             if(team2 == true)
                 rend.material.SetColor("_Color", team2Color);
             if(team1 == false && team2 == false)
-                rend.material.SetColor("_Color", Color.red);
+                rend.material.SetColor("_Color", Color.gray);
             if (UI.gameObject.activeSelf)
                 UI.gameObject.SetActive(false);
         }
@@ -113,15 +115,44 @@ public class NodeController : MonoBehaviour {
             if (opponentScore > 0 || score > 0)
             {
                 time += Time.deltaTime;
-                if (time >= 1)
+                if (time >= 0.5f)
                 {
-                    score--;
-                    opponentScore--;
+                    if (hasFort == true)
+                    {
+                        fortNum++;
+                        if (fortNum < 5)
+                        {
+                            score--;
+                            opponentScore--;
 
-                    scoreUI.t1--;
-                    scoreUI.t2--;
+                            scoreUI.t1--;
+                            scoreUI.t2--;
+                        }
+                        if (fortNum == 5)
+                        {
+                            opponentScore--;
+                            fortNum = 0;
+                            if (team == "team1")
+                            {
+                                scoreUI.t2--;
+                            }
+                            else
+                            {
+                                scoreUI.t1--;
+                            }
+                        }
+                        time = 0;
+                    }
+                    else
+                    {
+                        score--;
+                        opponentScore--;
 
-                    time = 0;
+                        scoreUI.t1--;
+                        scoreUI.t2--;
+
+                        time = 0;
+                    }
                 }
             }
 
@@ -132,19 +163,22 @@ public class NodeController : MonoBehaviour {
             if (score == 0)
             {
                 score = opponentScore;
-                if (opponentTeam == "Team1")
+                if (opponentTeam == "team1")
                 {
                     team2 = false;
                     team1 = true;
+                    team = "team1";
                 }
-                if (opponentTeam == "Team2")
+                if (opponentTeam == "team2")
                 {
                     team2 = true;
                     team1 = false;
+                    team = "team2";
                 }
                 battle = false;
             }
-            textObject.text = score.ToString() + "v" + opponentScore.ToString();
+            //textObject.text = score.ToString() + "  :  " + opponentScore.ToString();
+            textObject.text = "Team 1:" + score.ToString() + "  vs.  " + "Team 2:"+ opponentScore.ToString();
         }
         else
         {
@@ -173,16 +207,34 @@ public class NodeController : MonoBehaviour {
     {
         if (Targets.Contains(target) && score > 0)
         {
-            Debug.Log("FUCK");
-            Vector3 offset = new Vector3(0, 0.5f, 0);
-            Vector3 relativePos = target.transform.position - transform.position;
-            Quaternion rotation = Quaternion.LookRotation(relativePos);
-            GameObject spawnedUnit = Instantiate(Unit, transform.position + offset, rotation);
-            spawnedUnit.GetComponent<UnitMotor>().target = target.transform.position;
-            spawnedUnit.GetComponent<UnitMotor>().targetgm = target;
-            spawnedUnit.GetComponent<UnitMotor>().team = team;
-            spawnedUnit.GetComponent<UnitMotor>().text.text = score.ToString();
-            score = 0;
+            if (battle == true)
+            {
+                if (opponentTeam == target.GetComponent<NodeController>().team)
+                {
+                    Vector3 offset = new Vector3(0, 0.5f, 0);
+                    Vector3 relativePos = target.transform.position - transform.position;
+                    Quaternion rotation = Quaternion.LookRotation(relativePos);
+                    GameObject spawnedUnit = Instantiate(Unit, transform.position + offset, rotation);
+                    spawnedUnit.GetComponent<UnitMotor>().target = target.transform.position;
+                    spawnedUnit.GetComponent<UnitMotor>().targetgm = target;
+                    spawnedUnit.GetComponent<UnitMotor>().team = opponentTeam;
+                    spawnedUnit.GetComponent<UnitMotor>().text.text = score.ToString();
+                    score = 0;
+                }
+            }
+
+            if(battle == false)
+            {
+                Vector3 offset = new Vector3(0, 0.5f, 0);
+                Vector3 relativePos = target.transform.position - transform.position;
+                Quaternion rotation = Quaternion.LookRotation(relativePos);
+                GameObject spawnedUnit = Instantiate(Unit, transform.position + offset, rotation);
+                spawnedUnit.GetComponent<UnitMotor>().target = target.transform.position;
+                spawnedUnit.GetComponent<UnitMotor>().targetgm = target;
+                spawnedUnit.GetComponent<UnitMotor>().team = team;
+                spawnedUnit.GetComponent<UnitMotor>().text.text = score.ToString();
+                score = 0;
+            }
         }
     }
 

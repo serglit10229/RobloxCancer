@@ -8,6 +8,8 @@ public class NodeSelection : MonoBehaviour {
     public GameObject last;
     public Camera cam;
 
+    public string team = "team1";
+
     private int fingerID = -1;
     
     private void Awake()
@@ -65,7 +67,8 @@ public class NodeSelection : MonoBehaviour {
                 if (last == null)
                 {
                     last = hit.transform.gameObject;
-                    hit.transform.GetComponent<NodeController>().selected = true;
+                    if (hit.transform.GetComponent<NodeController>().team == team)
+                        hit.transform.GetComponent<NodeController>().selected = true;
                 }
                 if (hit.transform.GetComponent<NodeController>() == null)
                 {
@@ -75,12 +78,14 @@ public class NodeSelection : MonoBehaviour {
                 if (last != hit.transform)
                 {
                     last.GetComponent<NodeController>().selected = false;
-                    hit.transform.GetComponent<NodeController>().selected = true;
+                    if (hit.transform.GetComponent<NodeController>().team == team)
+                        hit.transform.GetComponent<NodeController>().selected = true;
                     last = hit.transform.gameObject;
                 }
                 else
                 {
-                    hit.transform.GetComponent<NodeController>().selected = true;
+                    if(hit.transform.GetComponent<NodeController>().team == team)
+                        hit.transform.GetComponent<NodeController>().selected = true;
                 }
             }
         }

@@ -381,7 +381,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70317040
 MonoBehaviour:
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -404,11 +404,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -528,7 +528,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &72877520
 MonoBehaviour:
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -551,11 +551,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -852,7 +852,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &236945846
 MonoBehaviour:
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -875,11 +875,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -942,9 +942,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -952,7 +954,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &260075906
 MeshRenderer:
@@ -1059,7 +1061,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266710982
 MonoBehaviour:
@@ -1332,9 +1334,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 1
   team: 
@@ -1342,7 +1346,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &282591051
 MeshRenderer:
@@ -1449,7 +1453,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &294945919
 MonoBehaviour:
@@ -1685,9 +1689,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 1
   team: 
@@ -1695,7 +1701,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &329654345
 MeshRenderer:
@@ -1875,7 +1881,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &337984730
 MonoBehaviour:
@@ -2208,7 +2214,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &395461009
 MonoBehaviour:
@@ -2385,7 +2391,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441644849
 MonoBehaviour:
@@ -2400,7 +2406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2408,11 +2414,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2463,7 +2469,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &452385806
 MonoBehaviour:
@@ -2640,7 +2646,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &480081224
 MonoBehaviour:
@@ -2655,7 +2661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2663,11 +2669,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2723,9 +2729,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -2733,7 +2741,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &483885220
 MeshRenderer:
@@ -3151,7 +3159,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &512527838
 MonoBehaviour:
@@ -3166,7 +3174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3174,11 +3182,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -3324,9 +3332,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -3334,7 +3344,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &529885409
 MeshRenderer:
@@ -3441,7 +3451,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200001}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &536359336
 MonoBehaviour:
@@ -3837,7 +3847,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &586985375
 MonoBehaviour:
@@ -3852,7 +3862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3860,11 +3870,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -4161,7 +4171,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665635651
 MonoBehaviour:
@@ -4269,7 +4279,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &671762906
 MonoBehaviour:
@@ -4984,7 +4994,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747163326
 MonoBehaviour:
@@ -5097,7 +5107,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779593177
 MonoBehaviour:
@@ -5678,7 +5688,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &914540870
 MonoBehaviour:
@@ -5693,7 +5703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5701,11 +5711,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -5756,7 +5766,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &937582487
 MonoBehaviour:
@@ -6006,7 +6016,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944758608
 MonoBehaviour:
@@ -6021,7 +6031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6029,11 +6039,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -6092,9 +6102,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -6102,7 +6114,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &954575398
 MeshRenderer:
@@ -6209,7 +6221,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &982183900
 MonoBehaviour:
@@ -6433,6 +6445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   last: {fileID: 0}
   cam: {fileID: 987605361}
+  team: team1
 --- !u!224 &1003494927 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224644959318820918, guid: b4870b497258b3445bb50bfd1987a692,
@@ -6557,7 +6570,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077164687
 MonoBehaviour:
@@ -6572,7 +6585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6580,11 +6593,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -6631,7 +6644,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083336508
 MonoBehaviour:
@@ -6646,7 +6659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6654,11 +6667,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -6788,7 +6801,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1111744841
 MonoBehaviour:
@@ -6901,9 +6914,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -6911,7 +6926,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1128798023
 MeshRenderer:
@@ -7018,7 +7033,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132266799
 MonoBehaviour:
@@ -7126,7 +7141,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1134038677
 MonoBehaviour:
@@ -7541,7 +7556,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1173154594
 MonoBehaviour:
@@ -7649,7 +7664,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188997459
 MonoBehaviour:
@@ -7978,7 +7993,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264037253
 MonoBehaviour:
@@ -7993,7 +8008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8001,11 +8016,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -8056,7 +8071,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282661258
 MonoBehaviour:
@@ -8240,9 +8255,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 1
   team: 
@@ -8250,7 +8267,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1291819750
 MeshRenderer:
@@ -8363,9 +8380,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -8373,7 +8392,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1306642875
 MeshRenderer:
@@ -8553,7 +8572,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321997153
 MonoBehaviour:
@@ -8661,7 +8680,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332047913
 MonoBehaviour:
@@ -8838,7 +8857,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344515069
 MonoBehaviour:
@@ -8853,7 +8872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8861,11 +8880,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -9011,9 +9030,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -9021,7 +9042,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1379671139
 MeshRenderer:
@@ -9289,7 +9310,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.2}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1457412195
 MonoBehaviour:
@@ -9402,9 +9423,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -9412,7 +9435,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1460620362
 MeshRenderer:
@@ -9522,9 +9545,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 1
   team2: 0
   team: 
@@ -9532,7 +9557,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1466031195
 MeshRenderer:
@@ -9731,9 +9756,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -9741,7 +9768,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1515375320
 MeshRenderer:
@@ -10081,7 +10108,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 11.200003}
-  m_SizeDelta: {x: 2, y: 5}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564853493
 MonoBehaviour:
@@ -10199,9 +10226,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 1513906470}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 1
   team2: 0
   team: 
@@ -10209,7 +10238,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1580412280
 MeshRenderer:
@@ -10628,9 +10657,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -10638,7 +10669,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1605906050
 MeshRenderer:
@@ -10974,7 +11005,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667583073
 MonoBehaviour:
@@ -10989,7 +11020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10997,11 +11028,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -11367,7 +11398,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703512284
 MonoBehaviour:
@@ -11382,7 +11413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11390,11 +11421,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -11451,9 +11482,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -11461,7 +11494,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1709349763
 MeshRenderer:
@@ -11564,7 +11597,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710383338
 MonoBehaviour:
@@ -11579,7 +11612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11587,11 +11620,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -11657,9 +11690,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -11667,7 +11702,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1783256515
 MeshRenderer:
@@ -11937,9 +11972,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 1
   team2: 0
   team: 
@@ -11947,7 +11984,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1822206197
 MeshRenderer:
@@ -12050,7 +12087,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1824211302
 MonoBehaviour:
@@ -12065,7 +12102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -12073,11 +12110,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -12198,7 +12235,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1827213974
 MonoBehaviour:
@@ -12213,7 +12250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -12221,11 +12258,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -12328,9 +12365,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -12338,7 +12377,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1857389269
 MeshRenderer:
@@ -12441,7 +12480,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1860336737
 MonoBehaviour:
@@ -12456,7 +12495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -12464,11 +12503,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -12743,7 +12782,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881509557
 MonoBehaviour:
@@ -12758,7 +12797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -12766,11 +12805,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -12830,9 +12869,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -12840,7 +12881,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &1917731862
 MeshRenderer:
@@ -13873,7 +13914,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051564268
 MonoBehaviour:
@@ -13888,7 +13929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -13896,11 +13937,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -14031,9 +14072,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -14041,7 +14084,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &2073342381
 MeshRenderer:
@@ -14144,7 +14187,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073373}
-  m_SizeDelta: {x: 33.94, y: 49.9}
+  m_SizeDelta: {x: 500, y: 63.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081066567
 MonoBehaviour:
@@ -14159,7 +14202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -14167,11 +14210,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 140
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -14229,9 +14272,11 @@ MonoBehaviour:
   interval: 1
   hasFactory: 0
   hasReactor: 0
+  hasFort: 0
   UI: {fileID: 0}
   time: 0
   boostNum: 0
+  fortNum: 0
   team1: 0
   team2: 0
   team: 
@@ -14239,7 +14284,7 @@ MonoBehaviour:
   opponentScore: 0
   opponentTeam: 
   team1Color: {r: 0, g: 0, b: 1, a: 1}
-  team2Color: {r: 0, g: 1, b: 0, a: 1}
+  team2Color: {r: 1, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
 --- !u!23 &2109638954
 MeshRenderer:
