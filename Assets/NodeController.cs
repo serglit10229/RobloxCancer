@@ -20,6 +20,7 @@ public class NodeController : MonoBehaviour {
     public float time = 0;
     public float boostNum = 0;
     public int fortNum = 0;
+    public bool changeSide = false;
 
     //Multiplayer
     public bool team1 = false;
@@ -112,6 +113,7 @@ public class NodeController : MonoBehaviour {
 
         if (battle == true)
         {
+            changeSide = true;
             if (opponentScore > 0 || score > 0)
             {
                 time += Time.deltaTime;
@@ -159,10 +161,28 @@ public class NodeController : MonoBehaviour {
             if (opponentScore == 0)
             {
                 battle = false;
+                changeSide = false;
             }
             if (score == 0)
             {
                 score = opponentScore;
+
+                if(hasReactor == true && changeSide == true)
+                {
+                    foreach (NodeController g in FindObjectsOfType<NodeController>())
+                    {
+                        if (g.team == team)
+                        {
+                            g.interval += 0.05f;
+                            changeSide = false;
+                        }
+                        if (g.team != team)
+                        {
+                            g.interval -= 0.05f;
+                            changeSide = false;
+                        }
+                    }
+                }
                 if (opponentTeam == "team1")
                 {
                     team2 = false;
@@ -175,6 +195,7 @@ public class NodeController : MonoBehaviour {
                     team1 = false;
                     team = "team2";
                 }
+                changeSide = false;
                 battle = false;
             }
             //textObject.text = score.ToString() + "  :  " + opponentScore.ToString();
