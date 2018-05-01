@@ -11,7 +11,9 @@ public class NodeSelection : MonoBehaviour {
     public string team = "team1";
 
     private int fingerID = -1;
-    
+
+    public List<GameObject> t = new List<GameObject>();
+
     private void Awake()
     {
     #if !UNITY_EDITOR
@@ -49,8 +51,128 @@ public class NodeSelection : MonoBehaviour {
             {
                 if (hit.transform.GetComponent<NodeController>() != null)
                 {
-                    Debug.Log(hit.transform.position);
-                    last.transform.GetComponent<NodeController>().Spawn(hit.transform.gameObject);
+                    if (last.GetComponent<NodeController>().Targets.Contains(hit.transform.gameObject))
+                    {
+                        Debug.Log(hit.transform.position);
+                        List<GameObject> t = new List<GameObject>();
+                        t.Add(hit.transform.gameObject);
+                        last.transform.GetComponent<NodeController>().Spawn(t);
+                    }
+                    else
+                    {
+
+                        foreach (GameObject g in last.GetComponent<NodeController>().Targets)
+                        {
+                            if (g == hit.transform.gameObject)
+                            {
+                                t.Add(g);
+                            }
+                            else
+                            {
+                                foreach (GameObject g1 in g.GetComponent<NodeController>().Targets)
+                                {
+                                    if (g1 == hit.transform.gameObject)
+                                    {
+                                        t.Add(g1);
+                                    }
+                                    else
+                                    {
+                                        foreach (GameObject g2 in g1.GetComponent<NodeController>().Targets)
+                                        {
+                                            if (g2 == hit.transform.gameObject)
+                                            {
+                                                t.Add(g2);
+                                            }
+                                            else
+                                            {
+                                                foreach (GameObject g3 in g2.GetComponent<NodeController>().Targets)
+                                                {
+                                                    if (g3 == hit.transform.gameObject)
+                                                    {
+                                                        t.Add(g3);
+                                                    }
+                                                    else
+                                                    {
+                                                        foreach (GameObject g4 in g3.GetComponent<NodeController>().Targets)
+                                                        {
+                                                            if (g4 == hit.transform.gameObject)
+                                                            {
+                                                                t.Add(g4);
+                                                            }
+                                                            else
+                                                            {
+                                                                foreach (GameObject g5 in g4.GetComponent<NodeController>().Targets)
+                                                                {
+                                                                    if (g5 == hit.transform.gameObject)
+                                                                    {
+                                                                        t.Add(g5);
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        foreach (GameObject g6 in g5.GetComponent<NodeController>().Targets)
+                                                                        {
+                                                                            if (g6 == hit.transform.gameObject)
+                                                                            {
+                                                                                t.Add(g6);
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                foreach (GameObject g7 in g6.GetComponent<NodeController>().Targets)
+                                                                                {
+                                                                                    if (g7 == hit.transform.gameObject)
+                                                                                    {
+                                                                                        t.Add(g7);
+                                                                                    }
+                                                                                    else
+                                                                                    {
+                                                                                        foreach (GameObject g8 in g7.GetComponent<NodeController>().Targets)
+                                                                                        {
+                                                                                            if (g8 == hit.transform.gameObject)
+                                                                                            {
+                                                                                                t.Add(g8);
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                                foreach (GameObject g9 in g8.GetComponent<NodeController>().Targets)
+                                                                                                {
+                                                                                                    if (g9 == hit.transform.gameObject)
+                                                                                                    {
+                                                                                                        t.Add(g9);
+                                                                                                    }
+                                                                                                    else
+                                                                                                    {
+                                                                                                        foreach (GameObject g10 in g9.GetComponent<NodeController>().Targets)
+                                                                                                        {
+                                                                                                            if (g10 == hit.transform.gameObject)
+                                                                                                            {
+                                                                                                                t.Add(g10);
+                                                                                                            }
+                                                                                                            else
+                                                                                                            {
+                                                                                                                Debug.Log("No Route");
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
